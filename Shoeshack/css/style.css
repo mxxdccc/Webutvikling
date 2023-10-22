@@ -1,0 +1,385 @@
+/* Setter standard skrifttype for hele nettsiden */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+/* Legger til litt padding til header, main og footer for mellomrom */
+header, main, footer {
+    padding: 4rem;
+}
+
+/* Styler header-seksjonen */
+header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+    background-color: #d4efff;
+}
+
+
+/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+section {
+    text-align: center; /* Sentrer tekstinnhold horisontalt */
+  }
+
+/* Gjør logo-lenken uten understrek */
+#logo {
+    text-decoration: none;
+}
+
+/* Skjuler standard navigasjonsmeny */
+.navbar {
+    display: none;
+}
+
+/* Styler responsiv navigasjonsmeny */
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/* Styler en svart knapp */
+.black-btn {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+
+/* Styler main-seksjonen i gridet */
+main {
+    grid-area: main;
+    padding: 250px;
+    background-color: #fff;
+}
+
+main > *:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+/* Setter bredden til bilder inni main-seksjonen til 100% */
+main section img {
+    width: 100%;
+}
+
+
+/* Styler footer-seksjonen i gridet */
+footer {
+    grid-area: footer;
+    background-color: #d4efff;
+}
+
+/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+#services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #efefef;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+#services h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#services article {
+    max-width: 300px;
+    width: 100%;
+    min-width: 200px;
+}
+
+/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+@media only screen and (min-width: 600px) {
+    /* Endrer grid-malen for bredere skjermer */
+    #grid-container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+
+    /* Skjuler menyikoner i header */
+    #ham, .fa-magnifying-glass {
+        display: none;
+    }
+
+    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Reduserer bildenes bredde til 50% i flex-seksjoner */
+    .flex-section img {
+        width: 50%;
+    }
+
+    /* Legger til litt mellomrom og justering i flex-seksjoner */
+    .flex-section section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
+    .right img {
+        order: 1;
+    }
+}
+
+/* Inngangsmodul til nettsiden */
+.xtx-entry{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.xtx-entry .container{
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+.xtx-entry .container .category{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 251px;
+    height: 500px;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+.xtx-entry .container .category a{
+    color: #fff;
+}
+.xtx-entry .category li{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 36px;
+    position: relative;
+}
+.xtx-entry .category li:hover{
+    background-color: #27ba9b;
+}
+.xtx-entry .category span{
+    font-size: 14px;
+}
+
+.xtx-entry .category span:first-child{
+    margin-left: 15px;
+}
+.xtx-entry .category a::after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-color: rgb(10, 10, 10);
+    top: 19px;
+    right: 19px;
+}
+
+.xtx-entry .prev{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 228px;
+    left: 260px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.xtx-entry .next{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 228px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+}
+.xtx-entry .indicator{
+    position:absolute;
+    width: 110px;
+    height: 10px;
+    /* background-color: pink; */
+    left: 680px;
+    bottom: 31px;
+}
+.xtx-entry .indicator li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 15px;
+    background-color: rgba(255,255,255,0.43);
+    border-radius: 50%;
+}
+.xtx-entry .indicator li.active{
+    background-color: #fff;
+}
+.xtx-entry .indicator li:last-child{
+    margin-right: 0;
+}
+/* img banner */
+.banner img {
+    width: 1450px; 
+    height: 500px; 
+  }
+
+
+/* base */
+/* Fjern margin og padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+/* Angi enhetlig skriftstørrelse, linjehøyde og skriftfamilierelaterte egenskaper for nettsider */
+body {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+    "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+
+/* Fjern standard stil fra listen */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Fjern standard tilt-effekt */
+em,
+i {
+  font-style: normal;
+}
+
+/* Fjern standard understreking fra a-taggen og angi standard tekstfarge */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* sette oppimg */
+img {
+  vertical-align: middle;
+}
+
+
+/* flyte til venstre */
+.fl {
+  float: left;
+}
+
+/* flyte rett */
+.fr {
+  float: right;
+}
+
+/* Metode for fjerning av dobbelt pseudoelement */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+/* Søkeboksinnstillinger */
+.search-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+/* Betalings informasjon */
+.betal {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex; /* Bruk flex layout */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 400px; 
+  }
+
+  .betal label,
+.betal input {
+  margin-bottom: 20px; 
+}
+
+.betal form input[type="submit"] {
+    display: block; 
+    margin: 0 auto; 
+  }
