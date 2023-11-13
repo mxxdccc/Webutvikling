@@ -121,51 +121,6 @@ footer {
     min-width: 200px;
 }
 
-/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
-@media only screen and (min-width: 600px) {
-    /* Endrer grid-malen for bredere skjermer */
-    #grid-container {
-        grid-template-areas: "header header header" "main main main" "footer footer footer";
-    }
-
-    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        list-style: none;
-        margin: 0;
-    }
-
-    /* Skjuler menyikoner i header */
-    #ham, .fa-magnifying-glass {
-        display: none;
-    }
-
-    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
-    .flex-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    /* Reduserer bildenes bredde til 50% i flex-seksjoner */
-    .flex-section img {
-        width: 50%;
-    }
-
-    /* Legger til litt mellomrom og justering i flex-seksjoner */
-    .flex-section section {
-        padding: 1rem;
-        width: 40%;
-        align-self: center;
-    }
-
-    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
-    .right img {
-        order: 1;
-    }
-}
 
 /* Inngangsmodul til nettsiden */
 .xtx-entry{
@@ -383,3 +338,58 @@ img {
     display: block; 
     margin: 0 auto; 
   }
+
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        background-color: rgb(105, 7, 105);
+    }
+
+    main section img {
+        width: 50%;
+    }
+    
+    /* Endrer grid-malen for bredere skjermer */
+    #grid-container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+
+    /* Skjuler menyikoner i header */
+    #ham, .fa-magnifying-glass {
+        display: none;
+    }
+
+    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Reduserer bildenes bredde til 50% i flex-seksjoner */
+    .flex-section img {
+        width: 50%;
+    }
+
+    /* Legger til litt mellomrom og justering i flex-seksjoner */
+    .flex-section section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
+    .right img {
+        order: 1;
+    }
+}
