@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap');
+
+/* Setter standard skrifttype for hele nettsiden */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Styler header-seksjonen */
+header {
+    background-color: #fff; 
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+  }
+  
+ /* Navigasjonslinjestil */
+  nav {
+    background-color: #fff;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+/* logobeholderstil */
+  .logo-container {
+    margin-right: auto; 
+  }
+  
+ /* logo stil */
+  .logo-container img {
+    max-width: 100px; 
+  }
+  
+ /* Navigasjonsmenystil */
+  .navbar {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+/* Stil for navigasjonsmenyelement */
+  .navbar li {
+    margin-right: 20px; 
+  }
+  
+/* Navigasjonslenkestil */
+  .navbar li a {
+    text-decoration: none; 
+    color: #000; 
+    font-weight: normal; 
+    position: relative; 
+    transition: font-weight 0.3s, border-bottom-color 0.3s; 
+  }
+
+/* understreking for home vises alltid */
+.navbar li:first-child a {
+    border-bottom: 2px solid #e6bd43; 
+  }
+  
+  /* Home og Contact teksten er fet */
+  .navbar li:first-child a,
+  .navbar li:last-child a {
+    font-weight: bold; 
+  }
+
+/* Mouseover-effekt - skrift tykkere */
+.navbar li a:hover {
+    font-weight: bold; 
+  }
+
+/* Gul understrekingseffekt */
+  .navbar li a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e6bd43; 
+    transition: all 0.3s ease; 
+    opacity: 0; 
+  }
+  
+/* Mouseover-effekt */
+  .navbar li a:hover::after {
+    opacity: 1; 
+  }
+  
+
+  p {
+    padding-left: 50px; 
+    padding-right: 50px; 
+}
+  
+/* Kontaktbakgrunnen er gul */
+  .navbar li:nth-child(4) a {
+    background-color: #e6bd43;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Contact mouseover-effekt for knapp */
+.navbar li:nth-child(4) a:hover {
+    background-color: #252525; 
+    color: #e6bd43; 
+  }
+
+/* Mouseover-knappeffekt */
+.black-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #252525;
+    background-color: #e6bd43; 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+/* Mouseover-knappeffekt */
+  .black-btn:hover {
+    background-color: #252525; 
+    color: #e6bd43; 
+  }
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+/* Legger til litt padding til header, main og footer for mellomrom */
+header, footer {
+    padding: 0;
+}
+
+/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+/* Hodebilde */
+.text-section {
+  position: relative;
+}
+
+.text-container {
+  background-image: url('https://images.pexels.com/photos/15469650/pexels-photo-15469650/free-photo-of-grener-kjoretoy-reise-hvit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.text-content {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  color: #fff; 
+  max-width: 50%; 
+}
+
+.text-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+
+
+.text1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.pexels.com/photos/15469650/pexels-photo-15469650/free-photo-of-grener-kjoretoy-reise-hvit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  padding: 0;
+  width: 100%;
+  height: 50vh;
+  color: #fff;
+}
+
+.text1-container h1 {
+  font-size: 3em; 
+}
+
+.text1-container p {
+  font-size: 1.2em; 
+}
+
+
+.text2-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  background-image: url('https://images.pexels.com/photos/15469650/pexels-photo-15469650/free-photo-of-grener-kjoretoy-reise-hvit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+.text2-container {
+  text-align: center;
+  color: #fff;
+}
+
+.text2-container h1 {
+  font-size: 3em; 
+}
+
+.text2-container p {
+  font-size: 1.2em; 
+}
+
+
+
+
+
+
+/* Styler responsiv navigasjonsmeny */
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #252525;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/* Styler main-seksjonen i gridet */
+main {
+    grid-area: main;
+  }
+
+
+/* Setter bredden til bilder inni main-seksjonen til 100% */
+main section img {
+  width: 100%;
+}
+
+/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+#services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#services .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+#services h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#services article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+  text-align: center; 
+  margin: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+.flex-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    background-color: #e6bd43; 
+    padding: 40px; 
+}
+
+/* Reduserer bildenes størrelse til 400x400 */
+.flex-section img {
+    width: 400px;
+    height: 400px;
+    margin-right: 20px; 
+}
+
+/* Legger til litt mellomrom og justering i flex-seksjoner */
+.flex-section section {
+    padding: 1rem;
+    width: 50%; 
+    text-align: left; 
+}
+
+/* Bunntekstbeholderstil */
+footer {
+    grid-area: footer;
+    background-color: #000; 
+    padding: 20px; 
+  }
+  
+  /* container */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+/* logo stil */
+  .container img {
+    max-width: 100px; 
+  }
+  
+/* tekststil */
+  .container p {
+    margin: 0; 
+    text-align: center; 
+    color: #fff; 
+  }
+  
+/* Sosial lenkestil */
+  .container ul {
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+  }
+  
+  .container ul li {
+    margin-left: 10px; 
+  }
+  
+  .container ul li a {
+    color: w#fff; 
+    text-decoration: none; 
+  }
+
+/* Font Awesome grunnleggende stiler av ikoner */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  /* Font Awesome */
+  .social-icons a {
+    color: w#fff; 
+    font-size: 24px; 
+    text-decoration: none;
+    transition: color 0.3s; 
+  }
+  
+  .social-icons a:hover {
+    color: #fff; 
+  }
+
+.icon {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px; 
+}
+
+.icon i {
+    position: absolute;
+    top: -1.5em; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #000; 
+    font-size: 1.5em; 
+}
+
+.icon-top {
+    top: -2em; 
+}
+
+
+input[type="email"] {
+    width: 200px; 
+    font-size: 1.2em; 
+    padding: 10px; 
+  }
+
+button {
+    width: 200px; 
+    font-size: 1.2em; 
+    padding: 10px; 
+    background-color: #e6bd43; 
+    color: black; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* button */
+button:hover {
+    background-color: #252525; 
+    color: #e6bd43; 
+    font-weight: bold; 
+}
+
+#front-page-container{
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+    width: 100%;
+    overflow: auto;
+}
+
+.p-main {
+max-width: 1600px;
+}
+
+
+.branding-articles {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.branding-articles img {
+  max-width: 350px; 
+  min-width: 200px; 
+  max-height: 350px; 
+}
+
+/* branding */
+.Branding h2 {
+  text-align: right; 
+}
+
+/* design */
+.Design .design-articles {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.Design .design-articles img {
+  max-width: 350px; 
+  min-width: 200px; 
+  max-height: 350px; 
+}
+
+/* development */
+.Development .development-articles {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.Development .development-articles img {
+  max-width: 350px; 
+  min-width: 200px; 
+  max-height: 350px; 
+}
+
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* Desktop - Grid Layout */
+  .design-articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile - Flexbox Layout */
+  .design-articles {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .image-container {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* section */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 0px;
+  color: rgb(14, 13, 13); 
+  padding-top: 50px; 
+  padding-bottom: 50px; 
+}
+
+
+
+.Branding img,
+.Design img,
+.Development img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease; 
+}
+
+.Branding img:hover,
+.Design img:hover,
+.Development img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.image-text {
+  background-color: #fff;
+  padding: 5px;
+  margin-top: auto; 
+}
+
+
+
+
+/* Knappestil */
+.page-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  color: #000;
+  background-color: #e6bd43;
+  border: 1px solid #e6bd43;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+/* Contact*/
+.Contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-content {
+  display: flex;
+  max-width: 800px;
+}
+
+.contact-form {
+  flex: 1;
+  text-align: left;
+  margin-right: 30px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #e6bd43;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+  padding: 50px;
+}
+
+.clients {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  background-color: #e6bd43; 
+  padding: 20px; 
+}
+
+.clients h2 {
+  width: 100%; 
+  margin: 20px 0; 
+  color: #000; 
+}
+
+.clients .images {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin: 20px 0; 
+}
+
+.clients .images img {
+  max-width: 100%; 
+  margin: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+  /* Endrer grid-malen for bredere skjermer */
+  #grid-container {
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+
+  /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      align-items: flex-start;
+  }
+
+  .navbar li {
+    margin-right: 0; 
+    margin-bottom: 10px; 
+  }
+
+  /* Skjuler menyikoner i header */
+  #ham, .fa-magnifying-glass {
+      display: none;
+  }
+
+  /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
+  .flex-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  /* Reduserer bildenes bredde til 50% i flex-seksjoner */
+  .flex-section img {
+      width: 50%;
+  }
+
+  /* Legger til litt mellomrom og justering i flex-seksjoner */
+  .flex-section section {
+      padding: 1rem;
+      width: 40%;
+      align-self: center;
+  }
+
+  /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
+  .right img {
+      order: 1;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #grid-container {
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+  }
+
+/* Ordne menyelementer vertikalt */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+}
+
+/* back */
+.back-to-top {
+  position: fixed;
+  bottom: 150px; 
+  right: 20px;
+  display: none;
+}
