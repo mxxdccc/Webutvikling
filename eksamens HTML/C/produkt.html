@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hjem</title>
+  <!-- style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- assets -->
+  <link rel="stylesheet" href="assets/icons/css/fontawesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<!-- body -->
+<body>
+  <header>
+    <section class="container">
+      <section class="search-bar">
+        <input type="text" id="search" name="search" placeholder="Søk her">
+        <button><i class="fas fa-search"></i></button>
+      </section>
+      <nav class="nav-with-logo">
+        <a href="index.html">Hjem</a>
+        <a href="produkt.html">Produkter</a>
+        <span class="logo">Logo</span>
+        <a href="kasse.html">Kategorier</a>
+        <a href="#">Kontakt oss</a>
+      </nav>
+      <section class="icon-bar">
+        <a href="kasse.html"><i class="fas fa-shopping-cart"></i></a>
+        <a href="produkt.html"><i class="fas fa-heart"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+      </section>
+    </section>
+  </header>
+
+<!-- Main -->
+<main>
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="#">Hjem</a> > <a href="#">Kategori</a> > Produktnavn
+  </nav>
+
+  <!-- Produktdetaljer -->
+  <section id="produkt-detaljer">
+    <div class="produkt-bilder">
+      <div class="main-image">
+        <img src="https://picsum.photos/400/400" alt="Produkt 1">
+      </div>
+      <div class="thumbnail-grid">
+        <img src="https://picsum.photos/100/100?random=1" alt="Thumbnail 1">
+        <img src="https://picsum.photos/100/100?random=2" alt="Thumbnail 2">
+        <img src="https://picsum.photos/100/100?random=3" alt="Thumbnail 3">
+        <img src="https://picsum.photos/100/100?random=3" alt="Thumbnail 4">
+      </div>
+    </div>
+    
+    <article class="produkt-info">
+      <h1>Produktnavn</h1>
+      <p><strong>MERKENAVN:</strong></p>
+      <p>5 195 Kr inkl. mva.</p>
+      <p><strong>Farge:</strong> Beige</p>
+      <label for="size">Velg størrelse</label>
+      <select id="size">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+      <!-- Knappedel -->
+      <div class="buttons">
+        <button class="add-to-cart">Legg i handlekurv</button>
+        <button class="add-to-favorites">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+      <!-- stjernerangering -->
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <span>(32 vurderinger)</span>
+      </div>
+      <!-- Produktdetaljer -->
+      <div class="details">
+        <p>Materiale og vedlikehold +</p>
+        <p>Produktdetaljer +</p>
+        <p>Størrelsestabell +</p>
+        <p>Anmeldelser +</p>
+      </div>
+    </article>
+  </section>
+  
+
+  <!-- Lignende produkter -->
+  <section id="lignende-produkter">
+    <h2>Lignende produkter</h2>
+    <ul class="product-grid">
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+      <li>
+        <img src="https://picsum.photos/350/300?random=1" alt="Produkt 1">
+        <article class="product-info">
+          <h3>Product name</h3>
+          <p>Kr 1999</p>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(842 vurderinger)</span>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <a href="#" class="view-more">Se flere lignende produkter →</a>
+  </section>
+</main>
+
+
+
+<!-- footer -->
+<footer>
+    <section class="footer-logo">
+      <h3>Logo</h3>
+      <p>At vero eos et accusamus et justo odio dignissimos ducimus qui blanditiis.</p>
+    </section>
+  
+    <section class="footer-info">
+      <article class="footer-contact">
+        <h3>KONTAKT</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Adresse: B R A Veien 4, 1757 Halden</li>
+          <li><i class="fas fa-phone"></i> Telefon: 69 60 80 00</li>
+          <li><i class="fas fa-envelope"></i> E-post: <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+          <li><i class="fas fa-clock"></i> Åpningstider: Stenger 15:00</li>
+        </ul>
+      </article>
+  
+      <article class="footer-links">
+        <h3>SNARVEIER</h3>
+        <ul>
+          <li><a href="#">Produkter</a></li>
+          <li><a href="#">Kategorier</a></li>
+          <li><a href="#">Kontakt oss</a></li>
+        </ul>
+      </article>
+  
+      <article class="footer-social">
+        <h3>SOSIALE MEDIER</h3>
+        <section class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </section>
+      </article>
+    </section>
+  </footer>
+
+  <script>
+    // Velg produktstørrelse
+    document.querySelector('#size').addEventListener('change', (e) => {
+      const selectedSize = e.target.value;
+      alert(`Selected size: ${selectedSize}`);
+    });
+  
+    // Legg i handlekurven
+    document.querySelector('.add-to-cart').addEventListener('click', () => {
+      alert('Product added to cart!');
+    });
+
+    document.querySelectorAll('.thumbnail-grid img').forEach((thumbnail) => {
+    thumbnail.addEventListener('click', (e) => {
+      const mainImage = document.querySelector('.main-image img');
+      mainImage.src = e.target.src; 
+    });
+
+    document.querySelector('#size').addEventListener('change', (e) => {
+    alert(`Valgt størrelse: ${e.target.value}`);
+  });
+
+  document.querySelector('.add-to-cart').addEventListener('click', () => {
+    alert('Produktet er lagt til i handlekurven!');
+  });
+  });
+</script>
+
+  </script>
+  
+  </body>
+  </html>
+
+
